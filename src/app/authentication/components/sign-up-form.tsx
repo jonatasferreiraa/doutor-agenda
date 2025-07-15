@@ -31,7 +31,7 @@ const registerSchema = z.object({
   password: z.string().trim().min(8, { message: "Senha é obrigatório" }),
 });
 
-const SignUpForm = () => {
+const signUpForm = () => {
   const router = useRouter();
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -139,4 +139,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default signUpForm;
